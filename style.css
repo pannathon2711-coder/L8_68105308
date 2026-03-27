@@ -1,0 +1,144 @@
+/* --- 1. การตั้งค่าพื้นฐาน (General Setup) --- */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- 2. ส่วนแถบเมนู (Navbar) --- */
+.navbar {
+    background-color: #212529 !important; /* สีดำเข้ม */
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.8) !important;
+    margin-left: 15px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* เปลี่ยนเป็นสีเหลืองเวลา Hover ให้ดูเด่น */
+}
+
+/* --- 3. ส่วนแบนเนอร์ (Main Banner / Jumbotron) --- */
+.main-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* เอฟเฟกต์ Parallax */
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* --- 4. ส่วนเนื้อหาและ Card (Main Content) --- */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* ลอยขึ้นเมื่อชี้ */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+/* --- 5. ส่วนท้าย (Footer) --- */
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 60px 0 30px 0;
+    border-top: 5px solid #0d6efd; /* เส้นสีฟ้าด้านบน */
+}
+
+footer h5 {
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+footer a {
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #ffc107 !important;
+}
+
+/* --- 6. ส่วน Modal (Contact Form) --- */
+.modal-header {
+    background-color: #212529;
+    color: white;
+    border-bottom: none;
+}
+
+.btn-close {
+    filter: invert(1); /* เปลี่ยนปุ่ม x เป็นสีขาว */
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+textarea.form-control {
+    resize: none; /* ล็อกขนาดไม่ให้ลากขยาย */
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 20px;
+}
+
+/* --- 7. Responsive Adjustment --- */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+    .main-banner {
+        height: 350px;
+    }
+}
